@@ -1,0 +1,21 @@
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+
+// Required
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+
+// Optional
+@import "../node_modules/bootstrap/scss/forms";
+
+.required-symbol::after {
+    color: red;
+    content: "*";
+    font-size: x-small;
+    vertical-align: top;
+    margin: 0 5px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/custom.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="node_modules/sweetalert2/dist/sweetalert2.all.js" defer></script>
+    <script src="smtp.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form onsubmit="send(document.getElementById('email').value, document.getElementById('phone').value, document.getElementById('name').value, document.getElementById('body').value); reset(); return false;">
+            <div class="form-floating">
+                <input type="text" id="name" class="form-control is-invalid" placeholder="Full Name" name="name" required pattern="^[A-Z]{1}[A-Za-z]* ([A-Z]{1}[A-Za-z]* )*[A-Z]{1}[A-Za-z]*$">
+                <label for="name">Full Name<span class="required-symbol"></span></label>
+            </div>
+            <div class="form-floating">
+                <input type="email" id="email" class="form-control is-invalid" placeholder="email" name="email" required>
+                <label for="email">Email<span class="required-symbol"></span></label>
+            </div>
+            <div class="form-floating">
+                <input type="tel" id="phone" class="form-control is-invalid not-required" placeholder="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <label for="phone">Phone</label>
+            </div>
+            <div class="form-floating">
+                <textarea type="text" id="body" class="form-control is-invalid" placeholder="body" name="body" required></textarea>
+                <label for="body">Body<span class="required-symbol"></span></label>
+            </div>
+            <button type="submit" class="btn">submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
